@@ -1,6 +1,6 @@
 Connector = require '../'
 
-xdescribe 'Connector', ->
+describe 'Connector', ->
   beforeEach (done) ->
     @sut = new Connector
     @sut.start {}, done

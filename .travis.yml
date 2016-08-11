@@ -51,7 +51,7 @@ before_deploy:
 deploy:
 - provider: releases
   api_key:
-    [github-release-key]
+    secure: "PaBwBB/Y4/vvyFvWhUIaRIhpgK5XL8U4HsZ7uxk00sWk1k8QV6fEbiLzFT736StGv72TxV7BHIyc2LphiSodHX2+3jPCzBzlqg23r0K9fv8Fs0tuB2NnjyyHIBh0wXbDnduYMXUr7X4dEiPgHhyTIWyw1QhDB7Jq27L92ttgXEPctEhaT2YdGn0ccjwwVjGarr94x7z3uKHt+WajJMRI7uzF2hyVo+er/HHJBxkUEvGBI0F8vfeVUL55nb52QmPcBco/qaLPZ88TgcRa4ZWUTUK8V4Bk9rqLMa6Mj/DsKI7LwRmATJEvwSj48y8BpZUNmVJK6FFHpRkqsIV0sS7eRrhkaKT/XEFCFvVHByZnOG8Nclbu3EUqZPw7XetAxImbPeGYFnVVwitdA4Nk4t3LU0kTUcPv8/w9XOJbjR2cP7NzQfbTOolT+X2TozIo8kTyiXO6Ww0x/6tpZKIPWUSulHGqapFhu+i7TiByHkr9WTGhcKav7R82s5vZUOaO5N5mg26oLKx4SbZo93gQDTtIT1Yj7CRC3J6yVrSCCoezm+wlTKdoKFLo3x32txgMDw5xeqaQUcfLMmM6TAaGrfPaPhT/s0HRjHgcYRN33KuYkwYrdqDytmlXqXF0qHM9N2Qs3ylVZEAXqngScYjQU2eNnaL1CeMDQLIMv1whqiPeWAU="
   file_glob: true
   file:
   - "deploy/*"
@@ -59,9 +59,9 @@ deploy:
   on:
     tags: true
 - provider: npm
-  email: [npm-email]
+  email: serveradmin@octoblu.com
   api_key:
-    [npm-release-key]
+    secure: "Tk+zIHk8K2eOkz3zVCRY9CSB/6lW4zlhmEZa/tc93Ur1DMpkl5CL+ntzkmfH586u/Mr57TcrlP5OjBN9I+HQp3wTXtOUXCo7E22rlstk/DE7e+O3FMrSjFjTP9E6w6p6piLH5syyifrWkS9ErX0VwpFLmFCDNDoahvgYFXe5VUHsQVGdNNq137ndIbiaiDduLGCll+1ovje4dHxFgQW9X+Kn1OltxFIIWmJTY0dEEvP4eBU5Z7cRxtgLYC0XlkLRdCnTO6rZO7drJSY3RF6qgilJfdPTe/a6/r+PchlfTVSFLuFGoJgJDtOdsTGiVHtB+r7j9WSUyaDezOcBFRVJXAnGuhAnVsG3PaKBAZ9NQgwoQEJkVrLselUtS92mBQT6ujWQr61FEe4CYMIVPcVcam4WjH3XARX4JDlRXwBqrA4xsfhtAYXexlX5B0JXyob3/dfjIT46xqHieux1O4AEKXf7u5zzvKQHsw7aejVCnwankC+ggV8zl+puZwf2arNRuh5fCUUDkJuAFcJSxTThToGsirsZdzGHdga471qz7PbEr7tKN7xzFnTGaV0Cn2NJaYnS+KWYuGBGicuwsTZ2JqenSwZuNTIfpLMJxGcAYizTy/GfxhWhlUdpF9kMIJFUSv36tWYvRJplN8gQcm61vFr/POBZaGKgHdDuT21fPbs="
   on:
     tags: true
     condition: "$NPM_PUBLISH = true"
