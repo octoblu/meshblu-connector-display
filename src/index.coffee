@@ -13,12 +13,13 @@ class Connector extends EventEmitter
     callback()
 
   displayOn: () =>
-    nircmd 'setdisplay monitor on'
+    nircmd 'monitor on'
     .then () ->
+      nircmd 'sendmouse move -1 1'
       @_emitStatus "on"
 
   displayOff: () =>
-    nircmd 'setdisplay monitor off'
+    nircmd 'monitor off'
     .then () ->
       @_emitStatus "off"
 
