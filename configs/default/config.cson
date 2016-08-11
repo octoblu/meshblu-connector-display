@@ -1,0 +1,14 @@
+title: "Default Configuration"
+type: "object"
+properties:
+  options:
+    title: "Options"
+    type: "object"
+    properties:
+      on:
+        title: "On?"
+        type: "boolean"
+        description: "Leave unchecked to turn off the display"
+    required: [
+      "on"
+    ]
